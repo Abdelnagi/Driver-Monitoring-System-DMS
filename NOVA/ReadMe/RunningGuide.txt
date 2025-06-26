@@ -12,8 +12,8 @@ This is a real-time web-based driver assistant system that runs in two modes:
 
 ### ✅ 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/farahahmed09/DMS_EECE25_CU.git
+cd DMS_EECE25_CU
 ```
 
 ---
