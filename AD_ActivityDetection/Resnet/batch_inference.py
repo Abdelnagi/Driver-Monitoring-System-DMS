@@ -174,8 +174,10 @@ inv_transform = transforms.Compose(
 )
 
 # Paths and class labels
-model_path = r"d:\grad project\imgClass_AD\activity detection models\fine_tuned_resnet18_2.pth"
-test_image_dir = r"D:\grad project\imgClass_AD\test_img"
+# put the trained weights here
+model_path = r""
+# put the directory that contains the images you want to infer on it
+test_image_dir = r""
 labels = list(range(0, 9))
 classes = {
     0: "Safe driving",
@@ -202,11 +204,6 @@ model = PyTorchClassificationModel(
     model_path, labels, test_transforms, classes, device=device
 ).model
 
-# # Perform batch inference
-# results = predict_batch(test_loader, model, device, classes, inv_transform=inv_transform)
-# print("Batch Results:")
-# for file, prediction in results:
-#     print(f"File: {file}, Predicted: {prediction}")
 
 # Select a specific batch number
 batch_number = 0 # For example, pick the 3rd batch (index starts from 0)

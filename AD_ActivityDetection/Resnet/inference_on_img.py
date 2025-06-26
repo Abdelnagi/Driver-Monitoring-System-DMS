@@ -113,7 +113,8 @@ class_labels = {
 }
 
 # Path to the trained model
-model_path = r"C:\Users\Amira\Driver-Monitoring-System\activity detection aya's edition\fine_tuned_resnet18_3.pth"
+# put your trained weights here
+model_path = r""
 
 # Initialize the model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
