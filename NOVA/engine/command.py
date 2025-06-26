@@ -306,7 +306,7 @@ class LLMManager():
         self.state.conversation_history = [self.generate_initial_context()]
 
         # Key for HERE API (used in later geocoding)
-        #self.key = HERE_KEY
+        self.api_key = HERE_API_KEY
 
         
     def generate_initial_context(self):
@@ -802,7 +802,7 @@ class LLMManager():
         autocomplete_url = "https://maps.googleapis.com/maps/api/place/autocomplete/json"
         params_autocomplete = {
             "input": destination,
-            #"key": GOOGLE_MAPS_KEY,
+            "api_key": GOOGLE_MAPS_API_KEY,
             "language": "en",
             "region": "eg"
         }
@@ -836,7 +836,7 @@ class LLMManager():
         details_url = "https://maps.googleapis.com/maps/api/place/details/json"
         params_details = {
             "place_id": place_id,
-             #"key": GOOGLE_MAPS_KEY,
+            "api_key": GOOGLE_MAPS_API_KEY,
             "language": "en"
         }
 
@@ -872,7 +872,7 @@ class LLMManager():
         autocomplete_url = "https://maps.googleapis.com/maps/api/place/autocomplete/json"
         params_autocomplete = {
             "input": destination,
-            #"key": GOOGLE_MAPS_KEY,
+            "api_key": GOOGLE_MAPS_API_KEY,
             "language": "en",
             "region": "eg"
         }
@@ -934,7 +934,7 @@ class LLMManager():
             "origin": f"{origin_lat},{origin_lon}",
             "destination": f"{dest_lat},{dest_lon}",
             "departure_time": "now",  # Uses real-time traffic
-            #"key": GOOGLE_MAPS_KEY
+            "api_key": GOOGLE_MAPS_API_KEY,
         }
 
         try:
@@ -1006,13 +1006,13 @@ class LLMManager():
         Returns a spoken-style summary of current conditions.
         """
         
-        #OPENWEATHER_KEY = WEATHER_KEY  # Use environment variable in production
+        OPENWEATHER_API_KEY = WEATHER_API_KEY  # Use environment variable in production
 
         # --- Build API URL based on input ---
         if lat and lon:
-            #url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPENWEATHER_KEY}&units=metric"
+            url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPENWEATHER_API_KEY}&units=metric"
         elif location_name:
-            #url = f"https://api.openweathermap.org/data/2.5/weather?q={location_name}&appid={OPENWEATHER_KEY}&units=metric"
+            url = f"https://api.openweathermap.org/data/2.5/weather?q={location_name}&appid={OPENWEATHER_API_KEY}&units=metric"
         else:
             return "Location for weather not provided."
 
@@ -1061,7 +1061,7 @@ class UserManager:
         """
         self.state = state
         self.Audio = Audio
-        #self.client = Groq(api_key=GROQ_KEY)  # Initialize Groq client for transcription
+        self.client = Groq(api_key=GROQ_API_KEY)  # Initialize Groq client for transcription
 
     def record_audio(self, duration=6, sample_rate=16000, file_path="input.wav"):
         """

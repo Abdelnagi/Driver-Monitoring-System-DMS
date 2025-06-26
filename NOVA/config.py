@@ -19,7 +19,12 @@ EMERGENCY_CONTACT_NUMBER = ""   # Phone number of the emergency contact person
 EMERGENCY_CONTACT_NAME = ""     # Full name of the emergency contact
 LIVE_STREAM_URL = ""            # Public or internal URL to the driver’s live camera feed
 
-
+# === API Keys ===
+WEATHER_API_KEY = ""        # API key for fetching weather data (e.g., OpenWeatherMap)
+LOCATION_API_KEY = ""       # API key for geolocation services
+GOOGLE_MAPS_API_KEY = ""    # API key for Google Maps integration (e.g., routing/navigation)
+GROQ_API_KEY = ""           # API key for whisper STT - for the Groq inference service (LLM or other models)
+HERE_API_KEY = ""           # API key for HERE Maps or HERE location services
 
 
 
