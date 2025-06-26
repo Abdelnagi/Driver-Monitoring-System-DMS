@@ -1,0 +1,16 @@
+{
+  "gaze_center": "Down",
+  "gaze_status": "NORMAL",
+  "pitch": " -32.60 deg",
+  "yaw": " -2.02 deg",
+  "roll": " -91.71 deg",
+  "head_status": "NORMAL",
+  "distraction": "within 3 min: 0",
+  "blinks": " 106",
+  "microsleep_duration": " 1.21 sec",
+  "yawns": " 2",
+  "yawn_duration": " 0.00 sec",
+  "blinks_per_minute": " 25",
+  "yawns_per_minute": " 0",
+  "alert": "Driver is awake and focused"
+}
